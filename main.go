@@ -24,8 +24,8 @@ func main() {
 	http.HandleFunc("/", hello)
 	http.HandleFunc("/twiml", twiml)
 	http.HandleFunc("/sms", sms)
-	//http.ListenAndServe(":"+os.Getenv("PORT"), nil)
-	http.ListenAndServe(":4567", nil)
+	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+	//http.ListenAndServe(":4567", nil)
 
 }
 
