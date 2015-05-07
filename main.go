@@ -23,8 +23,6 @@ func main() {
 	http.HandleFunc("/twiml", twiml)
 	http.HandleFunc("/sms", sms)
 	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
-	//http.ListenAndServe(":4567", nil)
-
 }
 
 type Request struct {
