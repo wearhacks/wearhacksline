@@ -1,18 +1,18 @@
 wearhacksline
 ========
 
-1) Chat on slack with your team via SMS
+1) Send SMS to specific channel via Twilio. The purpose was of this project was to allow the hackathon attendees to notify the organizing team of anything that was making them feel uncomfortable. 
 
-2) Send SMS to a team member from any Slack channel
+2) Reply back to number from which the notifiication was received.
+
 ## Usage
 
-1) To chat on Slack via SMS, first word in text message must be the destination channel of your Slack team
+1) To notify the organizing team on Slack via SMS, just send a message to the Twilio number provided
 
-    #general Hello team!!!
     
-2) To send an SMS to a team member from a slack channel, make sure the team member's phone number is available in the their profile. Then one can send text like below:
+2) To reply back to the notifier:
 
-    /sms <slack_username_of_team_member> <message body>
+    /sms <number_to_text> <message body>
 
 
 ## Installation
@@ -23,7 +23,7 @@ Make sure to change the **Slash Command** URL to whatever your URL is.
 
 ##### Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/ueg1990/SlackMS/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/ueg1990/wearhacksline/tree/master)
 
 And then:
 
@@ -32,6 +32,7 @@ $ heroku config:set SLACK_WEARHACKS_WEBHOOK_URL=<URL>
 $ heroku config:set TWILIO_ACCOUNT_SID=<ACCOUNT_SID> 
 $ heroku config:set TWILIO_AUTH_TOKEN=<AUTH_TOKEN>
 $ heroku config:set TWILIO_NUMBER=<NUMBER>
+$ heroku config:set PORT=<PORT>
 ```
 
 ### Setup Integration
